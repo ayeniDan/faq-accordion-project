@@ -21,6 +21,12 @@ function toggleAnswer(e) {
 		e.target.parentElement.parentElement.nextElementSibling.classList.add(
 			'hidden'
 		);
+	} else if (e.target.parentElement.classList.contains('question')) {
+		e.target.nextElementSibling.firstElementChild.classList.toggle('hidden');
+		e.target.nextElementSibling.lastElementChild.classList.toggle('hidden');
+		e.target.parentElement.parentElement.lastElementChild.classList.toggle(
+			'hidden'
+		);
 	}
 }
 
