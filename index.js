@@ -9,6 +9,10 @@ minusIcons[0].classList.remove('hidden');
 ul.querySelector('.iconPlus').classList.add('hidden');
 
 function toggleAnswer(e) {
+	answers.forEach((answer) => answer.classList.add('hidden'));
+	minusIcons.forEach((icon) => icon.classList.add('hidden'));
+	ul.querySelectorAll('.iconPlus').forEach((icon) => icon.classList.remove('hidden'));
+
 	if (e.target.classList.contains('iconPlus')) {
 		e.target.classList.add('hidden');
 		e.target.nextElementSibling.classList.remove('hidden');
